@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>Demilade Agbonyin</title>
+
+		<link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      	<link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+      	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+      	<meta name="viewport" content="width=device-width, initial-scale=1">
+      	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+      	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<meta charset="utf-8">
+  		<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  		<meta name="robots" content="noindex, nofollow" />
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  		<meta name="viewport" content="width=device-width, initial-scale=1">
+  		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  		<link rel="stylesheet" href="pages.css">
+  		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+        <style>
+        	body{
+        		background-color:#1a1a1a;
+        		color: white;
+        		padding: 50px;     		
+        	}
+        	p span{opacity: 1;}
+        	#myname{
+        		opacity: 1;
+        		margin-top: 70px;
+        		margin-left: 200px;
+        		font-size: 20px;
+
+        	}
+        	#traits{
+        		font-size: 80px;
+        		float:left;
+        		margin-left: 195px;
+        		padding-top: 60px;
+        		font-family: 'Helvetica', sans-serif;
+        		line-height: 90%;
+        		
+        	}
+        	#share{
+    				float:right;
+    				color: white;
+    				cursor:pointer;
+    		}
+    		#nav{
+    				float:left;
+    				color: white;
+    				cursor:pointer;
+    		}
+    		#share:hover, #nav:hover{opacity: 0.5;}
+    		#special{width:30%;}
+    		#tinymessage{
+    			margin-top: 100px;
+    			color: white;
+    			font-size: 10px;
+    			opacity: 0.7;
+    			font-family: 'Barlow', sans-serif;
+    		}
+        </style>
+	</head>
+
+	<body>
+		<div class="container">
+
+			<!-- ICONS -->
+			<div>
+				<i id = 'share' class="material-icons md-48">share</i>
+				<i onclick = 'openNav()' id = 'nav' class="material-icons md-48">menu</i>
+			</div>
+
+			<!-- NAVIGATION -->
+			<div id="mySidenav" class="bottomsidenav">
+				<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+				<a href="navigationpage.html"><i class="fa fa-folder" aria-hidden="true"></i>  Projects</a>
+				<a href="mailto:demiladeagbonyin@gmail.com"><i class="fa fa-envelope" aria-hidden="true"></i>  Email</a>
+				<a href="https://www.linkedin.com/in/demilade-agbonyin-59089816b"><i class="fa fa-linkedin-square" aria-hidden="true"></i>  LinkedIn</a>
+
+			</div>
+
+			<!-- MODAL HEADER -->
+		
+			<div id="myModal" class="modal" >
+
+  				<!-- Modal content -->
+  				<div class="modal-content" id = 'special'>
+    				<div class="modal-header">
+      					<span class="close">&times;</span>	
+   				 	</div>
+    				<div class="modal-body">
+     					<a href="http://www.facebook.com/sharer.php?u=https://de-mi.github.io/demiladeagbonyin/" class="fa fa-facebook"></a>
+						<a href="http://twitter.com/share?text=Check%20out%20this%20website&url=https://de-mi.github.io/demiladeagbonyin/" class="fa fa-twitter">  </a>
+						<a href="http://www.linkedin.com/shareArticle?mini=true&url=https://de-mi.github.io/demiladeagbonyin/&title=Check%20out%20this%20awesome%20website%20share%20button&summary=some%20summary%20if%20you%20want&source=stackoverflow.com" class="fa fa-linkedin">  </a>
+						<a href="https://www.google.com/bookmarks/mark?op=edit&bkmk=https://de-mi.github.io/demiladeagbonyin/&title=Check+out+this+website&annotation=&labels
+" class="fa fa-google">  </a>
+						<a href="http://compose.mail.yahoo.com/?to&subject=Check+out+this+website&body=https://de-mi.github.io/demiladeagbonyin/
+" class="fa fa-yahoo">  </a>
+            			<a href="https://mail.google.com/mail/u/0/?view=cm&to&su=Check+out+this+website&body=https://de-mi.github.io/demiladeagbonyin/&bcc&cc&fs=1&tf=1#" class="fa fa-google"></a>
+            			
+    				</div>
+    				<div class="modal-footer">
+      					<h5>Share</h5>
+   			 		</div>
+  				</div>
+
+			</div>
+		</div>
+		<div class="container">
+			<div>
+				<strong><p id = 'myname'>Demilade Agbonyin.</p></strong>
+			</div>
+			<div id = 'traits'>
+				<p ><span style = 'opacity: 0.5'>Critical thinker<br>Team player<br></span>
+					<!-- CHANGE COLOUR WHEN USER HOVERS ON CREATIVE -->
+					<span onmouseover = 'red()' onmouseleave="black()" style = 'color: red; cursor: pointer'>C</span><span onmouseover = 'orange()' onmouseleave="black()"style = 'color: orange; cursor: pointer'>r</span><span onmouseover = 'yellow()' onmouseleave="black()"style = 'color: #e6e600; cursor: pointer'>e</span><span onmouseover = 'green()' onmouseleave="black()"style = 'color: #00cc44; cursor: pointer'>a</span><span onmouseover = 'blue()' onmouseleave="black()"style = 'color: blue; cursor: pointer'>t</span><span onmouseover = 'indigo()' onmouseleave="black()"style = 'color: indigo; cursor: pointer'>i</span><span onmouseover = 'violet()' onmouseleave="black()"style = 'color: violet; cursor: pointer'>v</span><span onmouseover = 'red()' onmouseleave="black()"style = 'color: red; cursor: pointer'>e</span>
+
+					<br><span style = 'opacity: 0.5'>Reliable</span>
+				</p>
+				
+
+				<p id = 'tinymessage' >Demilade Agbonyin | Loughborough University | 07731449853</p>
+			</div>
+		
+		
+		
+		
+
+			
+			</div>
+		
+		
+			<script>
+			// Get the modal
+			var modal = document.getElementById("myModal");
+
+			// Get the button that opens the modal
+			var btn = document.getElementById("share");
+
+			// Get the <span> element that closes the modal
+			var span = document.getElementsByClassName("close")[0];
+
+			// When the user clicks the button, open the modal 
+			btn.onclick = function() {
+  				modal.style.display = "block";
+  				document.body.style.overflow = "hidden"; 
+    			document.body.style.height = "100%"; 
+			}
+
+			// When the user clicks on <span> (x), close the modal
+			span.onclick = function() {
+ 	 			modal.style.display = "none";
+ 	 			document.body.style.overflow = "auto"; 
+    			document.body.style.height = "auto"; 
+			}
+
+			// When the user clicks anywhere outside of the modal, close it
+			window.onclick = function(event) {
+  				if (event.target == modal) {
+   					modal.style.display = "none";
+   					document.body.style.overflow = "auto"; 
+    				document.body.style.height = "auto";  
+  				}
+			}
+
+			function openNav() {
+
+				document.getElementById("mySidenav").style.height = "30%";
+				document.getElementById("mySidenav").style.width = "100%";
+  				document.getElementById("mySidenav").style.display = "block";
+  
+			}
+
+			function closeNav() {
+				document.getElementById("mySidenav").style.height = "0px";
+
+  document.getElementById("mySidenav").style.width = "0";
+			}
+	
+		</script>
+		<script>
+			//FUNCTIONS TO CHANGE COLOURS WHEN USER HOVERS ON 'CREATIVE'
+			function red(){   
+				document.body.style.backgroundColor= "#b30000";
+			}
+			function orange(){   
+				document.body.style.backgroundColor= "#e65c00";
+			}
+			function yellow(){   
+				document.body.style.backgroundColor= "yellow";
+			}
+			function green(){   
+				document.body.style.backgroundColor= "#008000";
+			}
+			function blue(){   
+				document.body.style.backgroundColor= "#0000cc";
+			}
+			function indigo(){   
+				document.body.style.backgroundColor= "#4d0099";
+			}
+			function violet(){   
+				document.body.style.backgroundColor= "#ff1aff";
+			}
+			function black(){
+				document.body.style.backgroundColor = "#1a1a1a";
+			}
+		</script>
+	
+	</body>
+
+</html>

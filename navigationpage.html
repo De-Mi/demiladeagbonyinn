@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title> Demilade Agbonyin </title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #1a1a1a;
+  padding: 20px;
+  font-family: Arial;
+  color:white;
+}
+
+/* Center website */
+.main {
+  max-width: 1000px;
+  margin: auto;
+}
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+/* Add padding BETWEEN each column */
+.row,
+.row > .column {
+  padding: 8px;
+}
+
+/* Create four equal columns that floats next to each other */
+.column {
+  float: left;
+  width: 25%;
+}
+
+/* Clear floats after rows */ 
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  
+}
+
+/* Content */
+.content {
+  background-color: white;
+  padding: 10px;
+  cursor: pointer;
+  color:black;
+}
+.content:hover{opacity: 0.5;}
+
+/* Responsive layout - makes a two column-layout instead of four columns */
+@media screen and (max-width: 900px) {
+  .column {
+    width: 50%;
+  }
+}
+
+/* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+  }
+}
+
+.button {
+	border-radius: 1px;
+	background-color: white;
+	border: none;
+	color: black;
+	text-align: center;
+	font-size: 25px;
+	padding: 20px;
+	width: 200px;
+	transition: all 0.5s;
+	cursor: pointer;
+	margin: 50px;
+	float: left;
+	position: relative;
+	margin-left: 450px;
+}
+
+.button span {
+	cursor: pointer;
+	display: inline-block;
+	position: relative;
+	transition: 0.5s;
+}
+
+.button span:after {
+	content: '\00ab';
+	position: absolute;
+	opacity: 0;
+	top: 0;
+	right: -20px;
+	transition: 0.5s;
+}
+
+.button:hover span {padding-right: 25px;}
+
+.button:hover span:after {opacity: 1;right: 0;}
+</style>
+<style>
+a:link {
+  color: black; 
+  background-color: transparent; 
+  text-decoration: none;
+}
+
+a:visited {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:active {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+</style>
+</head>
+<body>
+
+<!-- MAIN (Center website) -->
+<div class="main">
+
+<h1>PORTFOLIO</h1>
+<hr>
+
+<h2>My Projects</h2>
+
+<!-- Portfolio Gallery Grid -->
+<div class="row">
+  <div class="column">
+    <div class="content">
+    	<a href = 'holidayCalender.html'>
+      <img src="holidayCalendar.jpg" alt="holidayCalendar" style="width:100%">
+      <h3>Holiday Calendar</h3>
+      <p>Know when any holiday is in any country</p>
+      <p>Language: HTML/CSS, JavaScript and PHP</p>
+  		</a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    	<a href = 'weatherApp.html'>
+    <img src="weather.jpg" alt="weather" style="width:100%">
+      <h3>Weather</h3>
+      <p>Check your local weather and other countries'</p>
+      <p>Language: HTML/CSS, JavaScript and PHP</p>
+  </a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    	<a href = 'SADE.html'>
+    <img src="chatbot.jpeg" alt="chatbot" width ='220'; height='145'>
+      <h3>Chatbot</h3>
+      <p>A chatbot called SADE. She can be your best friend.</p>
+      <p>Language: HTML/CSS, JavaScript and PHP</p>
+  </a>
+    </div>
+  </div>
+  <div class="column">
+    <div class="content">
+    	<a href = 'tictactoe.html'>
+    <img src="tic_tac_toe.jpeg" alt="tictactoe" width ='220'; height='145'>
+      <h3>Tic Tac Toe</h3>
+      <p>A fun game for the bored people</p>
+      <p>Language: HTML/CSS, JavaScript and PHP</p>
+  </a>
+    </div>
+  </div>
+    <div class="column">
+    <div class="content">
+    	<a href = 'passwordGenerator.html'>
+    <img src="password.jpeg" alt="password" style="width:100%">
+      <h3>Password Generator</h3>
+      <p>Generates passwords for free use</p>
+      <p>Language: HTML/CSS, JavaScript and PHP</p>
+  </a>
+    </div>
+  </div>
+
+
+<!-- END GRID -->
+</div>
+ 
+
+<!-- END MAIN -->
+
+</div>
+<button class="button" href = 'portfolio.php' ><span>Go Back</span></button>
+</body>
+</html>

@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+
+      <!-- -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/css/emoji.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="p5.js"></script>
+        <script src="p5.dom.js"></script>
+        <!-- <script src="p5.sound.js"></script> -->
+        <script src="sketch.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+  <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css" rel="stylesheet">
+  <link href="lib/css/emoji.css" rel="stylesheet">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="pages.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+  <style>
+     #nav{padding: 50px;cursor: pointer;}
+      #share{padding: 50px;cursor: pointer; float: right;}
+   
+   .introduction{
+    font-size: 80px;
+    font-family:'Barlow', sans-serif;
+   }
+   #mySidenav{display: none;}
+   #nav:hover{box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
+   #share:hover{box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
+         #blackout {
+            position: fixed;
+            top: 0px;
+            left: 20%;
+            width: 100%;
+            height: 100%;
+            z-index: 1000;
+            display: none;
+            background-color: black;
+            filter: alpha(opacity=30);
+            opacity: 0.3;
+            float:right;
+          }
+          * html #blackout {
+            position: absolute;
+          }
+  </style>
+  <style>
+  
+    /*body {font-family: Arial, Helvetica, sans-serif;background-color: white;}*/
+    body{background-color:#9966ff; width:100%;height: 100%}
+    * {box-sizing: border-box;}
+
+    /* Button used to open the chat form - fixed at the bottom of the page */
+    .open-button {
+      background-color: white;
+      color: SlateBlue;
+      font-size: 20px;
+      padding: 16px 20px;
+      border: none;
+      border-radius: 15px;
+      cursor: pointer;
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      position: fixed;
+      bottom: 23px;
+      right: 28px;
+      width: 400px;
+      height: 100px;
+    }
+
+
+    /* The popup chat - hidden by default */
+    .chat-popup {
+      box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+      display: none;
+      position: fixed;
+      bottom: 0;
+      right: 26px;
+      border: 3px solid gray;
+      border-radius: 15px;
+      z-index: 9;
+    }
+    .form-header{
+      padding: 8px 8px 8px 32px;
+      font-size: 25px;
+      background-color: SlateBlue;
+      color: white; 
+      display: block;
+
+    }
+    /* Add styles to the form container */
+    .form-container {
+      width: 400px;
+      height: 700px;
+      padding: 10px;
+      background-color: white;
+      border-radius: 12px;
+    }
+    .msg-container {
+      width: 374px;
+      height: 450px;
+      padding: 10px;
+      margin-top:10px;
+      background-color: white;
+      border-radius: 5px;
+      overflow: auto;
+    }
+    .send-container {
+      width: 374px;
+      height: 85px;
+      padding: 0px;
+      margin-top:10px;
+      background-color: white;
+      border-radius: 12px;
+
+    }
+
+
+  /* When the textarea gets focus, do something */
+  .form-container textarea:focus {
+    background-color: #ddd;
+    outline: none;
+  }
+
+  /* Set a style for the submit/send button */
+  .form-container .btn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 16px 20px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    margin-top:100px;
+    opacity: 0.8;
+  }
+  .form-container #pp{
+    display: block;
+    margin-top: 26em;
+    /*margin-bottom: 0.2em;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+  }
+  .form-container textarea {
+    width: 100%;
+    padding: 10px;
+    /*margin: 5px 0 22px 0;*/
+    border: none;
+    border-radius: 12px;
+    background: white;
+    resize: none;
+    min-height: 50px;
+    font-size: 15px;
+
+  }
+  .chatBubble{
+    display: inline-block;
+    padding: 10px;
+    /*margin: 5px 0 22px 0;*/
+    border: none;
+    border-radius: 12px;
+    background: #cc99ff;
+    color:white;
+    resize: none;
+    font-size: 15px;
+    min-height: 50px;margin-top: 10px;
+  }
+  .myChatBubble{
+    display: inline-block;
+    padding: 10px;
+    float: right;
+
+    margin-top: 10px;
+    /*margin: 5px 0 22px 0;*/
+    border: none;
+    border-radius: 12px;
+    background: SlateBlue;
+    color:white;
+    resize: none;
+    min-height: 50px;
+    font-size: 15px;
+  }
+  #microphone{float: right;color:gray;cursor:pointer; margin-top: 10px;font-size: 15px;}
+  #paperplane{float: right;color:gray;display:none;cursor:pointer;margin-top: 10px;font-size: 15px;}
+  #grin{font-size:15px;color:gray;cursor:pointer;margin-top: 10px;}
+  .circle {
+    height: 70px;
+    width: 70px;
+    background-color: SlateBlue;
+    border-radius: 50%;
+    display: none;
+    position:fixed;
+    bottom: 0;
+    text-align:center;
+    font-size:50px;
+    padding-top: 0px;
+    padding-left:1px;
+    color:white;
+    right: 456px;
+    cursor:pointer;
+    transition-duration: 0.4s;
+    margin-bottom:50px;
+    /*box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);*/
+  }
+  /* Add a red background color to the cancel button */
+  .form-container .cancel {
+    background-color: red;
+  }
+  .circle:hover{color:black;box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);}
+  /* Add some hover effects to buttons */
+  .form-container .btn:hover, .open-button:hover .circle:hover{
+    opacity: 1;
+  }
+
+</style>
+
+<script>
+      function openNav() {
+          //document.getElementById("mySidenav").style.width = "15%";
+          document.getElementById("mySidenav").style.display = "block";
+      }
+
+      function closeNav() {
+          //document.getElementById("mySidenav").style.width = "0";
+          document.getElementById("mySidenav").style.display = "none";
+      }
+  </script>
+</head>
+<body>
+
+   <!-- <div class = 'intro'> LOGO </div> -->
+       <i class="material-icons md-48" id = 'share' >share</i>
+       <!-- The Modal -->
+<div id="shareModal" class="modal">
+
+  <!-- Modal content -->
+  <div class="modal-content">
+    <div class="modal-header">
+      <span class="close">&times;</span>
+      <h2></h2>
+    </div>
+    <div class="modal-body">
+       <i class='fa fa-facebook'></i>
+       <i class='fa fa-twitter'></i>
+       <i class='fa fa-google'></i>
+       <i class='fa fa-youtube'></i>
+       <i class='fa fa-linkedin'></i>
+       <i class='fa fa-snapchat-ghost'></i>
+       <i class='fa fa-youtube'></i>
+       <i class='fa fa-instagram'></i>
+       <i class='fa fa-vine'></i>
+       <i class='fa fa-tumblr'></i>
+       <i class='fa fa-yahoo'></i>
+       <i class='fa fa-skype'></i>
+       <i class='fa fa-reddit'></i>
+    </div>
+    <div class="modal-footer">
+      <h3>share</h3>
+    </div>
+  </div>
+
+</div>
+
+   <i onclick = "openNav(); document.getElementById('blackout').style.display='block'"id = 'nav' class="material-icons md-48">menu</i>
+   <!-- NAVIGATION MENUS-->
+          <div  id = 'mySidenav'class="sidenav">
+            <div class="sidenav-header">
+                <p><i class='far fa-grin-beam'></i> Hello Visitor</p>
+            </div>
+            <a href="holidayCalender.html" ><i class="fa fa-calendar" aria-hidden="true"></i>  Holiday Calendar </a>
+          <a href="passwordGenerator.html"><i class="fa fa-lock" aria-hidden="true"></i>  Password Generator </a>
+          <a href="tictactoe.html"><i class="fa fa-times-circle" aria-hidden="true"></i>  Tic Tac Toe </a>
+          <a href="#"class = "selected"><i class="fa fa-comments" aria-hidden="true"></i>  Chatbot</a>
+          <a href="weatherApp.html"><i class="fa fa-cloud" aria-hidden="true"></i>  Weather </a>
+
+          <hr>
+          <a href="navigationpage.html"><i class="fa fa-folder" aria-hidden="true"></i> Portfolio </a>
+              <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
+              <hr>
+          <a href="comingsoon.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>  More </a>
+          </div>
+
+  <div class="container" onmouseover="closeNav()">
+  <p class = 'introduction'><strong>Meet SADE</strong></p>
+  <p style = 'font-size: 15px;'></p><p style = 'font-size: 15px;'> </p>
+</div>
+
+  <button class="open-button" onclick="openForm()" id = "chatButton" style = 'cursor: pointer;'> <hr id = 'pp'> Chat With SADE</button>
+
+  <div class="chat-popup form-container" id="myForm">
+
+    <div class="form-header">
+      <h1><center>SADE</center></h1>
+      <b><center>Your virtual best friend</center></b>
+    </div>
+
+    <div class="msg-container">
+      <span class = "chatBubble"> Hi. I'm Sade. What's your name?</span> 
+    </div>
+
+    <div class="send-container">
+      <hr>
+      <textarea placeholder="Type a message.." id = 'field' name="msg" oninput="sendIcon()" required></textarea>
+      <i class='far fa-grin' id = 'grin'></i><i id = 'microphone' class="fa fa-microphone"></i><i id = 'paperplane' class="fa fa-paper-plane" aria-hidden="true"></i>
+    </div>
+
+
+  </div>
+  <div id = 'close' class = 'circle' onclick = 'closeForm()'>&times;</div>
+  <div id="blackout" onclick="document.getElementById('blackout').style.display='none'; closeNav();"></div>
+  
+  <script>
+      // Get the modal
+      var modal = document.getElementById("shareModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("share");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+      btn.onclick = function() {
+        modal.style.display = "block";
+      }
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function() {
+        modal.style.display = "none";
+      }
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+
+    function openForm() {
+      document.getElementById("myForm").style.display = "block";
+      document.getElementById("close").style.display = "block";
+      document.getElementById("chatButton").style.display = "none";
+    }
+
+    function closeForm() {
+      document.getElementById("myForm").style.display = "none";
+      document.getElementById("chatButton").style.display = "block";
+      document.getElementById("close").style.display = "none";
+
+    }
+
+    function sendIcon(){
+      if(document.getElementById("field").value == '')
+      {
+        document.getElementById("microphone").style.display = "block";
+        document.getElementById("paperplane").style.display = "none";
+      }
+      else{
+        document.getElementById("microphone").style.display = "none";
+        document.getElementById("paperplane").style.display = "block";
+      }}</script>
+
+      <script>
+
+        $(document).ready(function(){
+
+          $("#paperplane").click(function(){
+            var message = document.getElementById("field").value;
+            if(message != ''){
+            $(".msg-container").append("<br><span class='myChatBubble'>"+message+"</span><br><br><br>");
+            $('#field').val('');
+            $(".msg-container").append("<span class='chatBubble'> What a nice name</span>");}
+            else{
+              alert("TYPE A MESSAGE");
+            }
+          });
+        });
+
+        var input = document.getElementById("field");
+      input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("paperplane").click();
+      }
+    });
+
+
+      </script>
+
+    </body>
+
+    </html>

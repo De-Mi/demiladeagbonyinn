@@ -1,0 +1,631 @@
+<html>
+<head>
+    <title> HolidayCalender</title>
+    <!-- LINKS AND LIBRARIES -->
+    <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex, nofollow" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="pages.css">
+
+
+    <style type = "text/css">
+        body{background-color: #E6E6FA; 
+
+        }
+        header{background-color: #e9ecef}
+
+        #main{
+          font-family: 'Oswald', sans-serif;
+          padding: 70px;
+          text-align: center;
+          font-size: 40px;
+
+      }
+
+      #nav{padding: 50px; cursor: pointer;}
+      #filter{padding: 50px;cursor: pointer; float: right;}
+
+      .answer{
+          background-color: #F8F8FF;
+          font-family:'Barlow', sans-serif;
+          font-size: 20px;
+          padding: 70px;
+      }
+
+  </style>
+  <!-- Function to open and close the navigation menu -->
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "20%";
+  }
+
+  function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+  }
+
+</script>
+
+</head>
+<body>
+    <header> 
+        
+        <i id = 'filter' class="fa fa-filter"></i> <!-- filter icon -->
+        <!-- The Modal -->
+        <div id="filterModal" class="modal">
+
+          <!-- Modal content -->
+          <div class="modal-content">
+            <div class="modal-header">
+              <span class="close">&times;</span> <!-- close button -->
+          </div>
+          <div class="modal-body">
+
+              <div class="form-check">
+                  <label class="form-check-label" for="radio1">
+                    <input type="radio" class="form-check-input" id="radio1" name="optradio" value="national"> National Holidays
+                  </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label" for="radio2">
+                <input type="radio" class="form-check-input" id="radio2" name="optradio" value="local">Local Holidays
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input"  id="radio3" name="optradio" value="religious">Religious Holidays
+              </label>
+            </div>
+            <div class="form-check">
+              <label class="form-check-label">
+                <input type="radio" class="form-check-input"  id="radio4" name="optradio" value="all">Show All 
+              </label>
+            </div>
+          </div>
+          <div class="modal-footer">
+              <h3>Filter By</h3>
+          </div>
+      </div>
+
+  </div>
+
+  <i onclick = "openNav(); document.getElementById('opaque').style.display='block'"id = 'nav' class="material-icons md-48">menu</i> <!-- navigation icon -->
+
+  <!-- NAVIGATION MENUS-->
+  <div  id = 'mySidenav'class="sidenav">
+    <div class="sidenav-header">
+        <p><i class='far fa-grin-beam'></i> Hello Visitor</p>
+    </div>
+    <a href="#"class = "selected" ><i class="fa fa-calendar" aria-hidden="true"></i>  Holiday Calendar </a>
+    <a href="passwordGenerator.html"><i class="fa fa-lock" aria-hidden="true"></i> Password Generator </a>
+    <a href="tictactoe.html"><i class="fa fa-times-circle" aria-hidden="true"></i>  Tic Tac Toe </a>
+    <a href="SADE.html"><i class="fa fa-comments" aria-hidden="true"></i>  Chatbot</a>
+    <a href="weatherApp.html"><i class="fa fa-cloud" aria-hidden="true"></i>  Weather </a>
+
+    <hr>
+    <a href="navigationpage.html"><i class="fa fa-folder" aria-hidden="true"></i> Portfolio </a>
+    <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
+    <hr>
+    <a href="comingsoon.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>  More </a>
+  </div>
+
+
+  <!-- HEADING -->
+  <div onmouseover="closeNav()">
+    <div  class="jumbotron text-center" style="margin-bottom:0">
+     <h1>HOLIDAY CALENDER</h1>
+     <p> Find out when all the holidays are from any year all over the world </p> 
+ </div>
+</div>
+
+</header>
+
+
+
+<div onmouseover="closeNav()" id = "main">
+    <p> 
+        WHAT HOLIDAYS ARE THERE IN 
+        <select id = "ctry"> 
+            <option disabled selected> select a country </option>
+
+            <option value = 'af'>Afghanistan</option> 
+            <option value = 'al'>Albania</option> 
+            <option value = 'dz'>Algeria</option>
+            <option value = 'as'>American Samoa</option>
+            <option value = 'ad'>Andorra</option>
+            <option value = 'ao'>Angola</option>
+            <option value = 'ai'>Anguilla</option>
+            <option value = 'ag'>Antigua and Barbuda</option>
+            <option value = 'ar'>Argentina</option>
+            <option value = 'am'>Armenia</option>
+            <option value = 'aw'>Aruba</option>
+            <option value = 'au'>Australia</option>
+            <option value = 'at'>Austria</option>
+            <option value = 'az'>Azerbaijan</option>
+
+
+            <option value = 'bh'>Bahrain</option>
+            <option value = 'bd'>Bangladesh</option>
+            <option value = 'bb'>Barbados</option>
+            <option value = 'by'>Belarus</option>
+            <option value = 'be'>Belgium</option>
+            <option value = 'bz'>Belize</option>
+            <option value = 'bn'>Benin</option>
+            <option value = 'bm'>Bermuda</option>
+            <option value = 'bt'>Bhutan</option>
+            <option value = 'bo'>Bolivia</option>
+            <option value = 'ba'>Bosnia and Herzegovina</option>
+            <option value = 'bw'>Botswana</option>
+            <option value = 'br'>Brazil</option>
+            <option value = 'vg'>British Virgin Islands</option>
+            <option value = 'bn'>Brunei</option>
+            <option value = 'bg'>Bulgaria</option>
+            <option value = 'bf'>Burkina Faso</option>
+            <option value = 'bi'>Burundi</option>
+
+
+            <option value = 'cv'>Cabo Verde</option>
+            <option value = 'kh'>Cambodia</option>
+            <option value = 'cm'>Cameroon</option>
+            <option value = 'ca'>Canada</option>
+            <option value = 'ky'>Cayman Islands</option>
+            <option value = 'cf'>Central African Republic</option>
+            <option value = 'td'>Chad</option>
+            <option value = 'cl'>Chile</option>
+            <option value = 'cn'>China</option>
+            <option value = 'co'>Colombia</option>
+            <option value = 'km'>Comoros</option>
+            <option value = 'cg'>Congo</option>
+            <option value = 'cd'>Congo Democratic Republic</option>
+            <option value = 'ck'>Cook Islands</option>
+            <option value = 'cr'>Costa Rica</option>
+            <option value = 'ci'>Cote d'Ivoire</option>
+            <option value = 'hr'>Croatia</option>
+            <option value = 'cu'>Cuba</option>
+            <option value = 'cw'>Curaçao</option>
+            <option value = 'cy'>Cyprus</option>
+            <option value = 'cz'>Czech Republic</option>
+
+            <option value = 'dk'>Denmark</option>
+            <option value = 'dj'>Djibouti</option>
+            <option value = 'dm'>Dominica</option>
+            <option value = 'do'>Dominica Republic</option>
+
+            <option value = 'tl'>East Timor</option>
+            <option value = 'ec'>Ecuador</option>
+            <option value = 'eg'>Egypt</option>
+            <option value = 'sv'>El Salvador</option>
+            <option value = 'gq'>Equatorial Guinea</option>
+            <option value = 'er'>Eritrea</option>
+            <option value = 'ee'>Estonia</option>
+            <option value = 'et'>Ethiopia</option>
+            <option value = 'sz'>eSwatini</option>
+
+            <option value = 'fk'>Falkland Islands</option>
+            <option value = 'fo'>Faroe Islands</option>
+            <option value = 'fj'>Fiji</option>
+            <option value = 'fi'>Finland</option>
+            <option value = 'fr'>France</option>
+            <option value = 'pf'>French Polynesia</option>
+
+
+
+
+
+            <option value = 'ga'>Gabon</option>
+            <option value = 'gm'>Gambia</option>
+            <option value = 'ge'>Georgia</option>
+            <option value = 'de'>Germany</option>
+            <option value = 'gh'>Ghana</option>
+            <option value = 'gi'>Gibralter</option>
+            <option value = 'gr'>Greece</option>
+            <option value = 'gl'>Greenland</option>
+            <option value = 'gd'>Grenada</option>
+            <option value = 'gu'>Guam</option>
+            <option value = 'gt'>Guatemala</option>
+            <option value = 'gg'>Guernsey</option>
+            <option value = 'gn'>Guinea</option>
+            <option value = 'gw'>Guinea-Bissau</option>
+            <option value = 'gy'>Guyana</option>
+
+            <option value = 'ht'>Haiti</option>
+            <option value = 'va'>Holy See (Vatican City)</option>
+            <option value = 'hn'>Honduras</option>
+            <option value = 'hk'>Hong Kong</option>
+            <option value = 'hu'>Hungary</option>
+
+            <option value = 'is'>Iceland</option>
+            <option value = 'in'>India</option>
+            <option value = 'id'>Indonesia</option>
+            <option value = 'ir'>Iran</option>
+            <option value = 'iq'>Iraq</option>
+            <option value = 'ie'>Ireland</option>
+            <option value = 'im'>Isle of Man</option>
+            <option value = 'il'>Israel</option>
+            <option value = 'it'>Italy</option>
+
+            <option value = 'jm'>Jamaica</option>
+            <option value = 'jp'>Japan</option>
+            <option value = 'je'>Jersey</option>
+            <option value = 'jo'>Jordan</option>
+
+            <option value = 'kz'>Kazakhstan</option>
+            <option value = 'ke'>Kenya</option>
+            <option value = 'ki'>Kiribati</option>
+            <option value = 'xk'>Kosovo</option>
+            <option value = 'kw'>Kuwait</option>
+            <option value = 'kg'>Kyrgyzstan</option>
+
+            <option value = 'la'>Laos</option>
+            <option value = 'lv'>Latvia</option>
+            <option value = 'lb'>Lebanon</option>
+            <option value = 'ls'>Lesotho</option>
+            <option value = 'lr'>Liberia</option>
+            <option value = 'ly'>Libya</option>
+            <option value = 'li'>Liechtenstien</option>
+            <option value = 'lt'>Lithuania</option>
+            <option value = 'lu'>Luxembourg</option>
+
+            <option value = 'mo'>Macau</option>
+            <option value = 'mg'>Madagascar</option>
+            <option value = 'mw'>Malawi</option>
+            <option value = 'my'>Malaysia</option>
+            <option value = 'mv'>Maldives</option>
+            <option value = 'ml'>Mali</option>
+            <option value = 'mt'>Malta</option>
+            <option value = 'mh'>Marshall Islands</option>
+            <option value = 'mq'>Martinique</option>
+            <option value = 'mr'>Mauritania</option>
+            <option value = 'mu'>Mauritius</option>
+            <option value = 'yt'>Mayotte</option>
+            <option value = 'mx'>Mexico</option>
+            <option value = 'fm'>Micronesia</option>
+            <option value = 'md'>Moldova</option>
+            <option value = 'mc'>Monaco</option>
+            <option value = 'mn'>Mongolia</option>
+            <option value = 'me'>Montenegro</option>
+            <option value = 'ms'>Montserrat</option>
+            <option value = 'ma'>Morocco</option>
+            <option value = 'mz'>Mozambique</option>
+            <option value = 'mm'>Myanmar</option>
+
+            <option value = 'na'>Namibia</option>
+            <option value = 'nr'>Nauru</option>
+            <option value = 'np'>Nepal</option>
+            <option value = 'nl'>Netherlands</option>
+            <option value = 'nc'>New Caledonia</option>
+            <option value = 'nz'>New Zealand</option>
+            <option value = 'ni'>Nicaragua</option>
+            <option value = 'ne'>Niger</option>
+            <option value = 'ng'>Nigeria</option>
+            <option value = 'kp'>North Korea</option>
+            <option value = 'mk'>North Macedonia</option>
+            <option value = 'mp'>Northan Mariana Islands</option>
+            <option value = 'no'>Norway</option>
+
+            <option value = 'om'>Oman</option>
+
+            <option value = 'pk'>Pakistan</option>
+            <option value = 'pw'>Palau</option>
+            <option value = 'pa'>Panama</option>
+            <option value = 'pg'>Papua New Guinea</option>
+            <option value = 'py'>Paraguay</option>
+            <option value = 'pe'>Peru</option>
+            <option value = 'ph'>Philippines</option>
+            <option value = 'pl'>Poland</option>
+            <option value = 'pt'>Portugal</option>
+            <option value = 'pr'>Puerto Rico</option>
+
+            <option value = 'qa'>Qatar</option>
+
+            <option value = 're'>Reunion</option>
+            <option value = 'ro'>Romania</option>
+            <option value = 'ru'>Russia</option>
+            <option value = 'rw'>Rwanda</option>
+
+            <option value = 'sh'>Saint Helena</option>
+            <option value = 'kn'>Saint Kitts and nevis</option>
+            <option value = 'lc'>Saint Lucia</option>
+            <option value = 'mf'>Saint Martin</option>
+            <option value = 'pm'>Saint Pierre and Miquelon</option>
+            <option value = 'vc'>Saint Vincent and the Grenadines</option>
+            <option value = 'ws'>Samoa</option>
+            <option value = 'sm'>San Marino</option>
+            <option value = 'st'>Sao Tome and Principe</option>
+            <option value = 'sa'>Saudi Arabia</option>
+            <option value = 'sn'>Senegal</option>
+            <option value = 'rs'>Serbia</option>
+            <option value = 'sc'>Seychelles</option>
+            <option value = 'sl'>Sierra Leone</option>
+            <option value = 'sg'>Singapore</option>
+            <option value = 'sx'>Sint Maarten</option>
+            <option value = 'sk'>Slovakia</option>
+            <option value = 'si'>Slovenia</option>
+            <option value = 'sb'>Solomon Islands</option>
+            <option value = 'so'>Somalia</option>
+            <option value = 'za'>South Africa</option>
+            <option value = 'kr'>South Korea</option>
+            <option value = 'ss'>South Sudan</option>
+            <option value = 'es'>Spain</option>
+            <option value = 'lk'>Sri Lanka</option>
+            <option value = 'bl'>St. Barts</option>
+            <option value = 'sd'>Sudan</option>
+            <option value = 'sr'>Suriname</option>
+            <option value = 'se'>Sweden</option>
+            <option value = 'ch'>Switzerland</option>
+            <option value = 'sy'>Syria</option>
+
+            <option value = 'tw'>Taiwan</option>
+            <option value = 'tj'>Tajikistan</option>
+            <option value = 'tz'>Tanzania</option>
+            <option value = 'th'>Thailand</option>
+            <option value = 'bs'>The Bahamas</option>
+            <option value = 'tg'>Togo</option>
+            <option value = 'to'>Tonga</option>
+            <option value = 'tt'>Trinidad and Tobago</option>
+            <option value = 'tn'>Tunisia</option>
+            <option value = 'tr'>Turkey</option>
+            <option value = 'tm'>Turkmenistan</option>
+            <option value = 'tc'>Turks and Caicos Islands</option>
+            <option value = 'tv'>Tuvalu</option>
+
+            <option value = 'vi'>US Virgin Islands</option>
+            <option value = 'ug'>Uganda</option>
+            <option value = 'ua'>Ukraine</option>
+            <option value = 'ae'>United Arab Emirates</option>
+            <option value = 'gb'>United Kingdom</option>
+            <option value = 'us'>United States</option>
+            <option value = 'uy'>Uruguay</option>
+            <option value = 'uz'>Uzbekistan</option>
+
+            <option value = 'vu'>Vanuatu</option>
+            <option value = 've'>Venezuela</option>
+            <option value = 'vn'>Vietnam</option>
+
+            <option value = 'wf'>Wallis and Futuna</option>
+
+            <option value = 'ye'>Yemen</option>
+
+            <option value = 'zm'>Zambia</option>
+            <option value = 'zw'>Zimbabwe</option>
+
+
+
+        </select>
+        IN 
+        <div id = 'day'></div>
+        <div id = 'month'></div>
+        <div id = 'year'></div>
+          
+        <script type="text/javascript">
+            var myDiv = document.getElementById("day");
+            var d = new Date();
+            var today = parseInt(d.getDate());
+                
+
+            //Create and append select list
+            var selectList = document.createElement("select");
+            selectList.setAttribute("id", "mySelect");
+            myDiv.appendChild(selectList);
+
+            //Create and append the options
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            option.text = "unspecify";
+            selectList.appendChild(option);
+            for (var i = 0; i <= 31; i++) {
+                if(i == today ){
+                var option = document.createElement("option");
+                option.setAttribute("value", i);
+                option.text = i;
+                selectList.appendChild(option);
+                document.getElementById("mySelect").value = i;
+                }   
+                else{
+                var option = document.createElement("option");
+                option.setAttribute("value", i);
+                option.text = i;
+                selectList.appendChild(option);
+                }
+            }
+       
+
+            var myMonth = document.getElementById("day");
+
+            var month = parseInt(d.getMonth());
+
+
+            //Create and append select list
+            var selectList = document.createElement("select");
+            selectList.setAttribute("id", "monthSelect");
+            myMonth.appendChild(selectList);
+
+            //Create and append the options
+            var option = document.createElement("option");
+            option.setAttribute("value", "");
+            option.text = "unspecify";
+            selectList.appendChild(option);
+            for (var j = 1; j <= 12; j++) {
+                if(j == month + 1){
+                    var option = document.createElement("option");
+                    option.setAttribute("value", j);
+                    option.text = j;
+                    selectList.appendChild(option);
+                    document.getElementById("monthSelect").value = j;
+                    console.log(month);
+                }
+                else{
+                    var option = document.createElement("option");
+                    option.setAttribute("value", j);
+                    option.text = j;
+                    selectList.appendChild(option);
+                }
+            }
+
+            var myYear = document.getElementById("day");
+            var d = new Date();
+            var year = parseInt(d.getFullYear());
+
+
+            //Create and append select list
+            var selectList = document.createElement("select");
+            selectList.setAttribute("id", "yearSelect");
+            myYear.appendChild(selectList);
+
+            //Create and append the options
+            for (var l = 1900; l <= year; l++) {
+                if(l == year ){
+                    var option = document.createElement("option");
+                    option.setAttribute("value", l);
+                    option.text = l;
+                    selectList.appendChild(option);
+                    document.getElementById("yearSelect").value = l;
+                }
+                else{
+                    var option = document.createElement("option");
+                    option.setAttribute("value", l);
+                    option.text = l;
+                    selectList.appendChild(option);
+                }
+            }
+
+
+            </script>
+           
+
+            
+        
+
+            </p>
+        </div>
+
+
+        <div onmouseover="closeNav()" class = "answer">
+
+</div>
+
+
+        <div id="opaque" onclick="document.getElementById('opaque').style.display='none'; closeNav();"></div>
+        
+        <script>
+
+          function getHoliday(){
+            $(".answer").html('');
+            var api = "https://calendarific.com/api/v2/holidays?&api_key=25d5dcd13ceb12cff35cd876042b7f6eb0806eed&country=";
+            var apiCall;
+            var secondHalf = "&year=";
+            var thirdHalf = "&month=";
+            var fourthHalf = "&day=";
+            var fifthHalf = "&type=";
+            var monthAPI = document.getElementById("monthSelect").value;
+            var dayAPI = document.getElementById("mySelect").value;
+            var date = document.getElementById("yearSelect").value; 
+            var ctt = document.getElementById("ctry").value; 
+
+            if(document.getElementById("radio1").checked){
+                if(dayAPI == 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fifthHalf+"national"}
+                else if(dayAPI != 'day' && monthAPI == "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+dayAPI+fifthHalf+"national"}
+                else if(dayAPI != 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fourthHalf+dayAPI+fifthHalf+"national"}
+                else{apiCall= api+ctt+secondHalf+date+fifthHalf+"national";}
+            }
+            else if(document.getElementById("radio2").checked){
+                if(dayAPI == 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fifthHalf+"local"}
+                else if(dayAPI != 'day' && monthAPI == "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+dayAPI+fifthHalf+"local"}
+                else if(dayAPI != 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fourthHalf+dayAPI+fifthHalf+"local"}
+                else{apiCall= api+ctt+secondHalf+date+fifthHalf+"local";}
+            }
+            else if(document.getElementById("radio3").checked){
+                if(dayAPI == 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fifthHalf+"religious"}
+                else if(dayAPI != 'day' && monthAPI == "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+dayAPI+fifthHalf+"religious"}
+                else if(dayAPI != 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fourthHalf+dayAPI+fifthHalf+"religious"}
+                else{apiCall= api+ctt+secondHalf+date+fifthHalf+"religious";}
+            }
+            else if(document.getElementById("radio4").checked){
+                if(dayAPI == 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI}
+                else if(dayAPI != 'day' && monthAPI == "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+dayAPI}
+                else if(dayAPI != 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fourthHalf+dayAPI}
+                else{apiCall= api+ctt+secondHalf+date;}
+            }
+            else{if(dayAPI == 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI}
+                else if(dayAPI != 'day' && monthAPI == "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+dayAPI}
+                else if(dayAPI != 'day' && monthAPI != "month"){apiCall = api+ctt+secondHalf+date+thirdHalf+monthAPI+fourthHalf+dayAPI}
+                else{apiCall= api+ctt+secondHalf+date;}}
+
+            
+
+             
+
+            $.getJSON(apiCall,callBack);
+
+            function callBack(data){
+              var x = "";
+              var reply = data.response.holidays;
+              for(var i in reply){
+                if(reply[i].description == null){x += "<strong>"+"Holiday: "+"</strong>"+reply[i].name+"<br/>"+"<strong>"+"When: "+"</strong>"+reply[i].date.iso+"<br/>"+"<br/>"+"<hr>"+"<br/>"}
+                    else{x += "<strong>"+"Holiday: "+"</strong>"+reply[i].name+"<br/>"+"<strong>"+"When: "+"</strong>"+reply[i].date.iso+"<br/>"+"<strong>"+"Description"+"</strong>"+"<br/>"+reply[i].description+"<br/>"+"<hr>"+"<br/>"}
+
+                }
+
+
+            $(".answer").append(x);
+            console.log(api+date);
+            console.log(apiCall);
+        }
+    }
+
+
+    $(document).ready(function(){
+      $("select, input").change(function(){
+        getHoliday();
+    });
+  });
+</script>
+<script type="text/javascript">
+      // Get the modal
+      var modal = document.getElementById("filterModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("filter");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal 
+     btn.onclick = function() {
+      modal.style.display = "block";
+    }
+
+            // When the user clicks on <span> (x), close the modal
+            span.onclick = function() {
+              modal.style.display = "none";
+          }
+
+            // When the user clicks anywhere outside of the modal, close it
+            window.onclick = function(event) {
+              if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
+
+    </script>
+
+</body>
+<html>

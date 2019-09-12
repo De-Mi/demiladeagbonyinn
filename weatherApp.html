@@ -1,0 +1,399 @@
+<html>
+	<head>
+		<title>weather</title>
+
+			<!-- LINKS AND LIBRARIES -->
+			<!-- FONTS -->
+      <link href="https://fonts.googleapis.com/css?family=Oswald" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Barlow&display=swap" rel="stylesheet">
+
+      <!-- -->
+      <script src="https://rawgithub.com/darkskyapp/skycons/master/skycons.js"></script>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noindex, nofollow" />
+        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    		<link rel="stylesheet" href="pages.css">
+
+    	<!-- CSS -->
+      	
+		<style>
+			body{background-image: url('bluebackground.jpg');}
+
+			header{background-color: #e9ecef;}
+			.main{
+				text-align: center;
+				font-size: 20px;
+				padding: 70px;
+			}
+			#nav{padding: 50px; cursor: pointer}
+			.weather{
+				text-align: center;
+				font-size: 30px;
+				color: white;
+			}
+      #place{margin-bottom: 20px;}
+			.temp{
+				text-align: center;
+				font-size: 200px;
+				color: white;
+				font-weight: bold;
+			}
+			.description{
+				text-align: center;
+				font-size: 20px;
+				color: white;
+			}
+      .weatherAdvice{
+        text-align: center;
+        font-size: 20px;
+        color: white;
+        margin-bottom: 50px;
+      }
+		</style>
+
+		<!-- JAVASCRIPT -->
+    	<script>
+			function openNav() {
+          document.getElementById("mySidenav").style.width = "20%";
+      }
+
+      function closeNav() {
+          document.getElementById("mySidenav").style.width = "0";
+      }
+			
+		</script>
+	</head>
+
+	<body>
+		<header> 
+
+      		<i onclick = "openNav(); document.getElementById('opaque').style.display='block'"id = 'nav' class="material-icons md-48">menu</i>
+      
+      		<!-- NAVIGATION MENUS-->
+      		<div  id = 'mySidenav'class="sidenav">
+            <div class="sidenav-header">
+                <p><i class='far fa-grin-beam'></i> Hello Visitor</p>
+            </div>
+            <a href="holidayCalender.html" ><i class="fa fa-calendar" aria-hidden="true"></i>  Holiday Calendar </a>
+          <a href="paswordGenerator.html"><i class="fa fa-lock" aria-hidden="true"></i>  Password Generator </a>
+          <a href="tictactoe.html"><i class="fa fa-times-circle" aria-hidden="true"></i>  Tic Tac Toe </a>
+          <a href="SADE.html"><i class="fa fa-comments" aria-hidden="true"></i>  Chatbot</a>
+          <a href="#"class = "selected"><i class="fa fa-cloud" aria-hidden="true"></i>  Weather </a>
+
+          <hr>
+          <a href="navigationpage.html"><i class="fa fa-folder" aria-hidden="true"></i> Portfolio </a>
+              <a href="index.html"><i class="fa fa-home" aria-hidden="true"></i> Home </a>
+              <hr>
+          <a href="comingsoon.html"><i class="fa fa-ellipsis-h" aria-hidden="true"></i>  More </a>
+          </div>
+
+      		<div onmouseover="closeNav()">
+		    	<div  class="jumbotron text-center" style="margin-bottom:0">
+  			   		<h1>WEATHER</h1>
+  			   		<p> Also notifies you to carry an umbrella or wear sunscreen </p>
+		    	</div>
+
+     		 </div>
+		</header>
+
+    <div style = "font-family: 'Barlow', sans-serif;">
+		  <div class ="main">
+        <div class="container"> 
+          <div class="form-group autocomplete" style = "display:flex;">
+            <input type="place" class="form-control form-control-lg" id="place" placeholder="Enter the name of a city..." name="place" size="100"><button class="btn btn-primary" style="min-width: 10px;padding: 3px; height: 5%" onclick = 'getLocation()'><!-- <i class="fa fa-location-arrow" style="color: white;" aria-hidden="true"></i> --><i class="material-icons" style="color: white;display: inline-block;">location_searching</i></button>
+          </div>
+        </div>
+			<button id = 'butt' class="btn btn-primary btn-lg"><i class="fa fa-cloud" aria-hidden="true" ></i>  Get Weather </button>
+			<!-- <button id = 'location' class="btn btn-primary btn-lg" onmouseover="getLocation()"><i class="fa fa-location-arrow" aria-hidden="true"></i>  Get Weather for Current Location </button> -->
+		</div>
+
+    <div style="text-align: center; margin-bottom: 30px;">
+       <canvas id="clear-day" width="64" height="64"></canvas>
+       <canvas id="clear-night" width="64" height="64"></canvas>
+       <canvas id="partly-cloudy-day" width="64" height="64"></canvas>
+       <canvas id="partly-cloudy-night" width="64" height="64"></canvas>
+       <canvas id="cloudy" width="64" height="64"></canvas>
+       <canvas id="rain" width="64" height="64"></canvas>
+       <canvas id="sleet" width="64" height="64"></canvas>
+       <canvas id="snow" width="64" height="64"></canvas>
+       <canvas id="wind" width="64" height="64"></canvas>
+       <canvas id="fog" width="64" height="64"></canvas>
+    </div>
+		<div class = "weather"></div>
+		<div class = "temp"></div>
+    <div class = "time"></div>
+		<div class = "description"></div>
+    <div class = 'weatherAdvice'></div>
+  </div>
+    <div id="opaque" onclick="document.getElementById('opaque').style.display='none'; closeNav();"></div>
+		 <script>
+          
+		 	
+      
+      function getWeather(){
+        $(".weather").html('');
+        $(".temp").html('');
+        $(".description").html('');
+        $(".weatherAdvice").html('');
+
+        var apiCall;
+        if((document.getElementById("place").value).includes('lat')){
+          var api = 'https://api.openweathermap.org/data/2.5/weather?';
+        
+        var place = document.getElementById("place").value;
+        var apiKey = "&units=metric&appid=693fba9d392ff15be20ce75c9660ba89";
+        apiCall = api+place+apiKey;
+        console.log(apiCall);
+        }
+
+        else{
+          var api = 'https://api.openweathermap.org/data/2.5/weather?q=';
+          var place = document.getElementById("place").value;
+          var apiKey = "&units=metric&appid=693fba9d392ff15be20ce75c9660ba89";
+          apiCall = api+place+apiKey;
+          //console.log(apiCall);
+        }
+        // var api = "";
+        // var place = document.getElementById("place").value;
+        // var apiKey 
+
+         
+
+        $.getJSON(apiCall, weatherCallBack);
+
+        function weatherCallBack(weatherData){
+        	var cityName = weatherData.name;
+        	var country = weatherData.sys.country;
+        	var description = weatherData.weather[0].description;
+        	var temperature = weatherData.main.temp;
+          var humidity = weatherData.main.humidity;
+        	var minTemp = weatherData.main.temp_min;
+        	var maxTemp = weatherData.main.temp_max;
+          
+          var date = new Date();
+          var hour = date.getHours();
+          console.log(hour);
+          if(hour >= 0 && hour <= 6){
+            
+              document.body.style.backgroundImage = "url('nightsky.jpg')";
+              
+          }
+          else if(hour >= 7 && hour <= 19){
+            
+              document.body.style.backgroundImage = "url('daysky.jpg')";
+              
+          }
+
+          //document.getElementById("place").value = cityName+","country; 
+        	$(".weather").append(cityName+", "+country+"<br/>");
+        	$(".temp").append(temperature+"°C"+"<br/>");
+          
+          
+
+        	$(".description").append("Description: "+description+"<br/>"+"Humidity: "+humidity+"<br/>"+"Minumum Temperature: "+minTemp+"°C"+"<br/>"+"Maximum Temperature: "+maxTemp+"°C"+"<br/>"+"<br/>"+"<br/>");
+
+        	if(description.includes("rain")){
+        	   $(".weatherAdvice").append("You should probably carry an umbrella"+"<br/>");
+              document.body.style.backgroundImage = "url('rain.png')";
+        	}
+         else if(description.includes("snow")){
+            $(".weatherAdvice").append("You should probably wear snow boots"+"<br/>");
+            document.body.style.backgroundImage = "url('snow.png')";
+         }
+        	else if(parseInt(temperature) > 20){
+        		$(".weatherAdvice").append("You should probably wear sunscreen"+"<br/>");
+        	}
+
+        	else if(parseInt(temperature) < 5){
+        		$(".weatherAdvice").append("You should probably grab a sweater"+"<br/>");
+        	}
+
+        	else if(parseInt(temperature) > 40){
+        		$(".weatherAdvice").append("You should definitely wear sunscreen"+"<br/>");
+        	}
+
+        	else if(parseInt(temperature) > 20){
+        		$(".weatherAdvice").append("You should probably wear sunscreen"+"<br/>");
+        	}
+
+        	console.log(weatherData);
+          
+          }
+        }
+
+
+			$(document).ready(function(){
+				$("#butt").click(function(){
+					
+					getWeather();
+				})
+			});
+
+      var input = document.getElementById("place");
+      input.addEventListener("keyup", function(event) {
+      if (event.keyCode === 13) {
+        event.preventDefault();
+        document.getElementById("butt").click();
+      }
+    });
+
+    </script>
+    <script>
+      
+        function getLocation() {
+          if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition);
+          } 
+          else { alert("Geolocation is not supported by this browser.");}
+        }
+
+        function showPosition(position) {
+          document.getElementById("place").value = "lat="+(position.coords.latitude).toFixed(2) + "&lon=" + (position.coords.longitude).toFixed(2);
+          console.log("lat="+(position.coords.latitude).toFixed(2) + "&lon=" + (position.coords.longitude).toFixed(2));    
+        }
+
+        // $(document).ready(function () {
+        //     getWeather();
+        //     setInterval(getLocation(), 6000);
+        // });
+        
+</script>
+
+    <script>
+      var icons = new Skycons({"color": "white"});
+
+      icons.set("clear-day", Skycons.CLEAR_DAY);
+      icons.set("clear-night", Skycons.CLEAR_NIGHT);
+      icons.set("partly-cloudy-day", Skycons.PARTLY_CLOUDY_DAY);
+      icons.set("partly-cloudy-night", Skycons.PARTLY_CLOUDY_NIGHT);
+      icons.set("cloudy", Skycons.CLOUDY);
+      icons.set("rain", Skycons.RAIN);
+      icons.set("sleet", Skycons.SLEET);
+      icons.set("snow", Skycons.SNOW);
+      icons.set("wind", Skycons.WIND);
+      icons.set("fog", Skycons.FOG);
+
+      icons.play();
+</script>
+<script type="text/javascript">
+  function autocomplete(inp, arr) {
+  /*the autocomplete function takes two arguments,
+  the text field element and an array of possible autocompleted values:*/
+  var currentFocus;
+  /*execute a function when someone writes in the text field:*/
+  inp.addEventListener("input", function(e) {
+      var a, b, i, val = this.value;
+      /*close any already open lists of autocompleted values*/
+      closeAllLists();
+      if (!val) { return false;}
+      currentFocus = -1;
+      /*create a DIV element that will contain the items (values):*/
+      a = document.createElement("DIV");
+      a.setAttribute("id", this.id + "autocomplete-list");
+      a.setAttribute("class", "autocomplete-items");
+      /*append the DIV element as a child of the autocomplete container:*/
+      this.parentNode.appendChild(a);
+      /*for each item in the array...*/
+      for (i = 0; i < arr.length; i++) {
+        /*check if the item starts with the same letters as the text field value:*/
+        if (arr[i].substr(0, val.length).toUpperCase() == val.toUpperCase()) {
+          /*create a DIV element for each matching element:*/
+          b = document.createElement("DIV");
+          /*make the matching letters bold:*/
+          b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
+          b.innerHTML += arr[i].substr(val.length);
+          /*insert a input field that will hold the current array item's value:*/
+          b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
+          /*execute a function when someone clicks on the item value (DIV element):*/
+          b.addEventListener("click", function(e) {
+              /*insert the value for the autocomplete text field:*/
+              inp.value = this.getElementsByTagName("input")[0].value;
+              /*close the list of autocompleted values,
+              (or any other open lists of autocompleted values:*/
+              closeAllLists();
+          });
+          a.appendChild(b);
+        }
+      }
+  });
+  /*execute a function presses a key on the keyboard:*/
+  inp.addEventListener("keydown", function(e) {
+      var x = document.getElementById(this.id + "autocomplete-list");
+      if (x) x = x.getElementsByTagName("div");
+      if (e.keyCode == 40) {
+        /*If the arrow DOWN key is pressed,
+        increase the currentFocus variable:*/
+        currentFocus++;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 38) { //up
+        /*If the arrow UP key is pressed,
+        decrease the currentFocus variable:*/
+        currentFocus--;
+        /*and and make the current item more visible:*/
+        addActive(x);
+      } else if (e.keyCode == 13) {
+        /*If the ENTER key is pressed, prevent the form from being submitted,*/
+        e.preventDefault();
+        if (currentFocus > -1) {
+          /*and simulate a click on the "active" item:*/
+          if (x) x[currentFocus].click();
+        }
+      }
+  });
+  function addActive(x) {
+    /*a function to classify an item as "active":*/
+    if (!x) return false;
+    /*start by removing the "active" class on all items:*/
+    removeActive(x);
+    if (currentFocus >= x.length) currentFocus = 0;
+    if (currentFocus < 0) currentFocus = (x.length - 1);
+    /*add class "autocomplete-active":*/
+    x[currentFocus].classList.add("autocomplete-active");
+  }
+  function removeActive(x) {
+    /*a function to remove the "active" class from all autocomplete items:*/
+    for (var i = 0; i < x.length; i++) {
+      x[i].classList.remove("autocomplete-active");
+    }
+  }
+  function closeAllLists(elmnt) {
+    /*close all autocomplete lists in the document,
+    except the one passed as an argument:*/
+    var x = document.getElementsByClassName("autocomplete-items");
+    for (var i = 0; i < x.length; i++) {
+      if (elmnt != x[i] && elmnt != inp) {
+        x[i].parentNode.removeChild(x[i]);
+      }
+    }
+  }
+  /*execute a function when someone clicks in the document:*/
+  document.addEventListener("click", function (e) {
+      closeAllLists(e.target);
+  });
+}
+  var countries = ["Abuja","Accra","Addis Ababa", "Adelaide", "Algiers", "Almaty", "Amman","Amsterdam","Anadyr","Anchorage","Ankara","Antananarivo","Asuncion","Athens","Atlanta","Auckland","Baghdad","Bangalore","Bangkok","Barcelona","Beijing","Beirut","Belgrade","Berlin","Bogota","Boston","Brasilia","Brisbane","Brussels","Bucharest","Budapest","Buenos Aires","Cairo","Calgary","Canberra","Cape Town","Caracas","Casablanca","Chicago","Copenhagen","Dallas","Dar es Salaam","Darwin","Denver","Detroit","Dhaka","Doha","Dubai","Dublin","Edmonton","Frankfurt","Guatemala City","Halifax","Hanoi","Harare","Havana","Helinksi","Hong Kong","Honolulu","Houston","Ikeja","Indianapolis","Islamabad","Istanbul","Jakarta","Jerusalem","Johannesburg","Karachi","Kathmandu","Khartoum","Kingston","Kinshasa","Kiritimati","Kolkata","Kuala Lumpur","Kuwait City","Kyiv","La Paz","Lagos","Lahore","Las Vegas","Lima","Lisbon","London","Los Angeles","Madrid","Managua","Manila","Melbourne","Mexico City","Miami","Minneapolis","Minsk","Montevideo","Montréal","Moscow","Mumbai","Nairobi","Nassau","New Delhi","New Orleans","New York","Oslo","Ottawa","Paris","Perth","Philadelphia","Phoenix","Prague","Reykjavik", "Rio de Janeiro","Riyadh","Rome","Salt Lake City","San Francisco","San Juan","San Salvador","Santiago","Santo Domingo","São Paulo","Seattle","Seoul","Shanghai","Singapore","Sofia","St. John's","Stockholm","Suva","Sydney","Taipei","Tallinn","Tashkent","Tegucigalpa","Tehran","Tokyo","Toronto","Vancouver","Vienna","Warsaw","Washington DC","Winnipeg","Yangon","Zagreb","Zurich"];
+
+  autocomplete(document.getElementById("place"), countries);
+</script>
+
+
+    
+	</body>
+</html>
